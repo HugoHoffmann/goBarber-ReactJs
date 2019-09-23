@@ -45,7 +45,7 @@ export function* signUp({payload}){
     }
 }
 
-export default function setToken({payload}){
+export function setToken({payload}){
     if(!payload) return;
 
     const { token } = payload.auth;
