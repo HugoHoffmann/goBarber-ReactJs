@@ -4,11 +4,11 @@ import { toast } from 'react-toastify'
 import { updateProfileSuccess, updateProfileFailure } from './actions';
 export function* updateProfile( { payload } ){
     try {
-        const {name, email, ...rest } = payload.data;
+        const {name, email, avatar_id, ...rest } = payload.data;
 
         // unir dois objetos
         const profile = Object.assign(
-            {name, email}, 
+            {name, email, avatar_id}, 
             rest.oldPassaword ? rest : {}
         );
 
